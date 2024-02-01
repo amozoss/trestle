@@ -43,8 +43,4 @@ ready(function () {
 })
 
 // Trigger the page load events.
-if (turbolinks) {
-  $(document).on('turbolinks:load', triggerReady)
-} else {
-  $(document).ready(triggerReady)
-}
+$(document).on('turbo:load', triggerReady)
